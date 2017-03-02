@@ -1,3 +1,15 @@
+# t.datetime    "starts_at"
+# t.datetime    "ends_at"
+# t.integer     "venue_id"
+# t.string      "hero_image_url"
+# t.text        "extended_html_description"
+# t.integer     "category_id"
+# t.string      "name"
+# t.datetime    "created_at",                null: false
+# t.datetime    "updated_at",                null: false
+# t.index       ["category_id"], name: "index_events_on_category_id", using: :btree
+# t.index       ["venue_id"], name: "index_events_on_venue_id", using: :btree
+
 class Event < ActiveRecord::Base
   belongs_to :venue
   belongs_to :category

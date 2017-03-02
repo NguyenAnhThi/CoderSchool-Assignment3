@@ -1,80 +1,92 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/spec/routes/events_spec.rb": [
-        1,
-        null,
-        1,
-        1,
-        null
-      ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/spec/rails_helper.rb": [
-        null,
-        1,
+      "/Users/macOS/Desktop/Assignment3/spec/controllers/events_controller_spec.rb": [
         1,
         null,
         1,
         1,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
-        null,
-        1,
-        null,
         1,
         null,
         null,
-        null,
-        null,
         1,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
         1,
-        null,
-        null,
+        1,
+        1,
         1,
         null,
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/environment.rb": [
+      "/Users/macOS/Desktop/Assignment3/spec/rails_helper.rb": [
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        1,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
+      "/Users/macOS/Desktop/Assignment3/config/environment.rb": [
         null,
         1,
         null,
         null,
         1
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/application.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/application.rb": [
         1,
         null,
         1,
@@ -98,11 +110,11 @@
         null,
         null,
         null,
-        1,
+        null,
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/boot.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/boot.rb": [
         1,
         null,
         1,
@@ -118,7 +130,7 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/environments/test.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/environments/test.rb": [
         1,
         null,
         null,
@@ -162,7 +174,7 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/assets.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/assets.rb": [
         null,
         null,
         null,
@@ -175,7 +187,7 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/backtrace_silencers.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/backtrace_silencers.rb": [
         null,
         null,
         null,
@@ -184,18 +196,18 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/cookies_serializer.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/cookies_serializer.rb": [
         null,
         null,
         1
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/filter_parameter_logging.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/filter_parameter_logging.rb": [
         null,
         null,
         null,
         1
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/inflections.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/inflections.rb": [
         null,
         null,
         null,
@@ -213,18 +225,18 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/mime_types.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/mime_types.rb": [
         null,
         null,
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/session_store.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/session_store.rb": [
         null,
         null,
         1
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/simple_form.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/simple_form.rb": [
         null,
         1,
         null,
@@ -391,7 +403,7 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/simple_form_bootstrap.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/simple_form_bootstrap.rb": [
         null,
         1,
         1,
@@ -542,7 +554,7 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/initializers/wrap_parameters.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/initializers/wrap_parameters.rb": [
         null,
         null,
         null,
@@ -558,7 +570,8 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/config/routes.rb": [
+      "/Users/macOS/Desktop/Assignment3/config/routes.rb": [
+        1,
         1,
         1,
         null,
@@ -621,22 +634,79 @@
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/app/helpers/application_helper.rb": [
+      "/Users/macOS/Desktop/Assignment3/app/helpers/application_helper.rb": [
         1,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/app/helpers/events_helper.rb": [
+      "/Users/macOS/Desktop/Assignment3/app/helpers/events_helper.rb": [
         1,
         1,
         0,
         null,
         null
       ],
-      "/Users/dtt22/code/coderschool/ruby/CoderTicket/app/helpers/tickets_helper.rb": [
+      "/Users/macOS/Desktop/Assignment3/app/helpers/tickets_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/macOS/Desktop/Assignment3/app/controllers/events_controller.rb": [
+        1,
+        null
+      ],
+      "/Users/macOS/Desktop/Assignment3/app/controllers/application_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null
+      ],
+      "/Users/macOS/Desktop/Assignment3/app/models/event.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        null
+      ],
+      "/Users/macOS/Desktop/Assignment3/app/models/venue.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/macOS/Desktop/Assignment3/app/models/category.rb": [
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
         1,
         null
       ]
     },
-    "timestamp": 1477632197
+    "timestamp": 1488475737
   }
 }
