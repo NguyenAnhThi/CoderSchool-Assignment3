@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   get 'upcoming' => 'events#index'
   root 'events#index'
 
+  delete 'log_out' => 'sessions#destroy'
+  resources :sessions, only: [:new, :create]
+  resources :users
   resources :events do
     resources :tickets
   end
