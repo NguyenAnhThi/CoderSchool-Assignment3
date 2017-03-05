@@ -13,6 +13,7 @@
 class Event < ActiveRecord::Base
   belongs_to :venue
   belongs_to :category
+  belongs_to :creater, class_name: 'User'
   has_many :ticket_types
 
   validates_presence_of :extended_html_description, :venue, :category, :starts_at
@@ -27,4 +28,12 @@ class Event < ActiveRecord::Base
   end
 
   delegate :name, to: :venue, allow_nil: true, prefix: true
+
+  def total_quantity
+    ticket_types.sum { |t| t.max_quantity }
+  end
+
+  def have_enough_ticket_types?
+    ticket_types.count >= 1
+  end
 end

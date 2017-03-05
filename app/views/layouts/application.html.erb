@@ -9,10 +9,21 @@
 <body>
 
 <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
-  <a class="navbar-brand" href="<%= root_path %>">Coder Ticket</a>
+  <a class="navbar-brand" href="<%= root_path %>"> <i class="fa fa-ticket" aria-hidden="true"></i> Coder Ticket
+    <i class="fa fa-ticket" aria-hidden="true"></i></a>
 
   <% if current_user %>
       <ul class="nav navbar-nav float-xs-right">
+        <li class="nav-item">
+          <a class="nav-link" href="<%= new_event_path %>">
+            <i class="fa fa-plus-circle" aria-hidden="true"></i> New Event
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="<%= mine_events_path %>">
+            <i class="fa fa-user" aria-hidden="true"></i> My Event
+          </a>
+        </li>
         <li class="nav-item text-capitalize ">
           <%= link_to "Hi, #{current_user.name}!", nil, class: 'nav-link active ' %>
         </li>

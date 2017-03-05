@@ -2,7 +2,7 @@
   <div class="col-sm-12">
     <div class="card">
       <h3 class="card-header"> Sign In</h3>
-      <%= form_tag sessions_path do %>
+      <%= form_tag sessions_path, id: "session" do %>
           <div class="card-block">
 
             <div class="form-group">
@@ -13,7 +13,7 @@
             </div>
 
           </div>
-          <div class="card-footer text-right">
+          <div class="card-footer text-right" style="text-align: right">
             <%= submit_tag "Sign In", class: 'btn btn-primary', data: {disable_with: "signing in..."} %>
             <%= link_to "Back", root_path, class: 'btn btn-outline-primary' %>
           </div>

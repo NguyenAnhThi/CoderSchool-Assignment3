@@ -62,7 +62,13 @@ e = Event.create({
 
   <p style="text-align:justify"> </p>
 
-  <p style="text-align:justify"><img src="https://media.ticketbox.vn/agenda/2015/12/14/57EEE9.jpg" /></p>
+  <p style="text-align:justify"> </p>
+
+  <div style="text-align:center">
+
+  <img src="https://media.ticketbox.vn/agenda/2015/12/14/57EEE9.jpg " width="700"/>
+
+  </div>
 
   <p style="text-align:justify"> </p>
 
@@ -89,8 +95,8 @@ e = Event.create({
   <p style="text-align:justify">Mỗi sản phẩm âm nhạc của Đan Trường khi ra mắt đều trở thành bản hit (ăn khách) trên các bảng xếp hạng. Hẳn nhiên, sự yêu mến không điều kiện, vô tư của lực lượng fan (người hâm mộ) hùng hậu đã góp phần không nhỏ trong việc đưa một ca khúc mới của thần tượng đứng đầu bảng xếp hạng âm nhạc. Song, không khó để nhận ra Đan Trường là ca sĩ không ngại thể nghiệm những điều mới mẻ để mang đến người yêu nhạc những sản phẩm lạ tai, đón đầu xu hướng.</p>
 
   <p style="text-align:justify"> </p>
-
-  <p style="text-align:justify"><img src="https://media.ticketbox.vn/agenda/2015/12/14/06EAAD.jpg" /></p>
+  
+  <p style="text-align:center"><img src="https://media.ticketbox.vn/agenda/2015/12/14/06EAAD.jpg" width="700" /></p>
 
   <p style="text-align:justify"> </p>
 
@@ -104,7 +110,8 @@ e = Event.create({
 
   <p style="text-align:justify"> </p>
 
-  <p style="text-align:justify"><img src="https://media.ticketbox.vn/agenda/2015/12/14/0714C1.jpg" /></p>
+  <p style="text-align:center">
+  <img src="https://media.ticketbox.vn/agenda/2015/12/14/0714C1.jpg" width="700" /></p>
 
   <p style="text-align:justify"> </p>
 

@@ -1,0 +1,53 @@
+<%= form_for @event do |f| %>
+    <div class="card-block">
+      <div class="form-group">
+        <strong><%= f.label :name %></strong>
+        <%= f.text_field :name, placeholder: 'Event name', class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <p><strong>Category</strong></p>
+        <%= f.select :category_id, @categories.map { |u| [u.name, u.id] }, {}, class: "form-control" %>
+      </div>
+
+      <div class="form-group">
+        <p><strong>Venue <a class="btn btn-outline-primary btn-sm" href="<%= new_venue_path %>">
+          <i class="fa fa-plus-circle" aria-hidden="true"></i> Venue
+        </a></strong></p>
+        <%= f.select :venue_id, @venues.map { |u| [u.name, u.id] }, {}, class: 'form-control' %>
+
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="form-group">
+            <p><strong>Starts at</strong></p>
+            <%= f.datetime_select :starts_at, class: 'form-control' %>
+          </div>
+        </div>
+        <div class="col-sm-6">
+          <div class="form-group">
+            <p><strong>Ends at</strong></p>
+            <%= f.datetime_select :ends_at, class: 'form-control' %>
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <p><strong>Image URL</strong></p>
+        <%= f.text_field :hero_image_url, placeholder: 'Image URL', class: 'form-control' %>
+      </div>
+
+      <div class="form-group">
+        <p><strong>Extended HTML Description</strong></p>
+        <%= f.text_area :extended_html_description, placeholder: 'Extended html description', class: 'form-control' %>
+      </div>
+    </div>
+
+    <div class="card-footer text-right" style="text-align: right">
+      <%= f.submit button_name, class: button_type %>
+      <%= link_to "Back", back_link, class: 'btn btn-outline-primary' %>
+    </div>
+
+<% end %>
+

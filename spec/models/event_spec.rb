@@ -35,4 +35,8 @@ RSpec.describe Event, type: :model do
       expect(event.venue_name).to eq "GEM Center"
     end
   end
+
+  it { should belong_to(:venue) }
+  it { should belong_to(:category) }
+  it { should have_many (:ticket_types) }
 end

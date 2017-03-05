@@ -1,0 +1,27 @@
+<div class="row">
+  <div class="col-sm-12">
+    <div class="card">
+      <h3 class="card-header">Create New Venue</h3>
+      <%= form_for @venue do |f| %>
+          <div class="card-block">
+            <div class="form-group">
+              <strong><%= f.label :name %></strong>
+              <%= f.text_field :name, placeholder: 'Venue name', class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <p><strong>Address</strong></p>
+              <%= f.text_field :full_address, placeholder: 'Venue address', class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <strong>Region</strong>
+              <%= f.select :region_id, @regions.map { |u| [u.name, u.id] }, {}, class: "form-control" %>
+            </div>
+          </div>
+          <div class="card-footer text-right" style="text-align: right">
+            <%= f.submit 'Create Venue', class: 'btn btn-primary button' %>
+            <%= link_to "Back", root_path, class: 'btn btn-outline-primary' %>
+          </div>
+      <% end %>
+    </div>
+  </div>
+</div>
