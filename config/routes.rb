@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'upcoming' => 'events#index'
   root 'events#index'
-
+  get 'auth/:provider/callback' => 'sessions#callback'
   delete 'log_out' => 'sessions#destroy'
   resources :venues, only: [:new, :create]
   resources :sessions, only: [:new, :create]
