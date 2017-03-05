@@ -35,6 +35,8 @@ gem 'bootstrap', '~> 4.0.0.alpha5'
 gem 'simple_form'
 gem 'font-awesome-rails'
 gem 'font-kit-rails', '~> 1.2.0'
+gem 'omniauth'
+gem 'omniauth-facebook', '~> 3.0.0'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

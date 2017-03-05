@@ -15,6 +15,7 @@
           </div>
           <div class="card-footer text-right" style="text-align: right">
             <%= submit_tag "Sign In", class: 'btn btn-primary', data: {disable_with: "signing in..."} %>
+            <%= link_to "Sign In with Facebook", '/auth/facebook', class: 'btn btn-primary', data: {disable_with: "signing in..."} %>
             <%= link_to "Back", root_path, class: 'btn btn-outline-primary' %>
           </div>
       <% end %>
