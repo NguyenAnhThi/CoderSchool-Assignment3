@@ -4,8 +4,8 @@
 **Coder Ticket** is a Ruby on Rails application that allows users to create and buy tickets to cool events.
 
 - Submitted by: **Nguyen Anh Thi**
-- Time spent: **28** hours
-- URL: **https://arcane-savannah-93684.herokuapp.com**
+- Time spent: **31** hours
+- URL: **https://secret-ridge-60181.herokuapp.com**
 - SimpleCov Test Coverage: [coverage/index.html](coverage/index.html)
 
 ## User Stories
@@ -60,7 +60,7 @@ The person with best test coverage will win a small present from the instructor 
 ### Optional Stories
 
 * [ ] Users cannot buy tickets to events that occur in the past.
-* [ ] Users can log in with Facebook.
+* [x] Users can log in with Facebook.
 * [ ] Users receive an email when they have purchased a ticket.
 * [ ] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.
 * [ ] User A can allow User B to edit User A's event. In other words, an event owner can assign other people to be "event admins".
