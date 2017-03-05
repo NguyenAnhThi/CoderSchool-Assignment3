@@ -3,9 +3,9 @@
 
 **Coder Ticket** is a Ruby on Rails application that allows users to create and buy tickets to cool events.
 
-- Submitted by: **Nguyen Anh Thi*
+- Submitted by: **Nguyen Anh Thi**
 - Time spent: **28** hours
-- URL: **Insert your Heroku URL here**
+- URL: **https://arcane-savannah-93684.herokuapp.com**
 - SimpleCov Test Coverage: [coverage/index.html](coverage/index.html)
 
 ## User Stories
@@ -73,8 +73,7 @@ The person with best test coverage will win a small present from the instructor 
 Describe any challenges encountered while building the app.
 
 ## License
-
-    Copyright [yyyy] [name of copyright owner]
+    Copyright [2017] [Nguyen Anh Thi]
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
