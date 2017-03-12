@@ -5,16 +5,13 @@
       <%= form_for @user do |f| %>
           <div class="card-block">
             <div class="form-group">
-              <%= f.label :name %>
-              <%= f.text_field :name, class: 'form-control' %>
+              <%= f.text_field :name, class: 'form-control', placeholder: 'Name' %>
             </div>
             <div class="form-group">
-              <%= f.label :email %>
-              <%= f.text_field :email, class: 'form-control' %>
+              <%= f.text_field :email, class: 'form-control', placeholder: 'Email' %>
             </div>
             <div class="form-group">
-              <%= f.label :password %>
-              <%= f.password_field :password, class: 'form-control' %>
+              <%= f.password_field :password, class: 'form-control', placeholder: 'Password'%>
             </div>
           </div>
           <div class="card-footer text-right" style="text-align: right">

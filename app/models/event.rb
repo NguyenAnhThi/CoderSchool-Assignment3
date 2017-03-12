@@ -23,6 +23,8 @@ class Event < ActiveRecord::Base
     where("ends_at > ?", Time.now)
   end
 
+  scope :published, -> { where.not(published_at: nil) }
+
   def self.search(keyword)
     where("name ILIKE ?", "%#{keyword}%")
   end
@@ -37,3 +39,5 @@ class Event < ActiveRecord::Base
     ticket_types.count >= 1
   end
 end
+
+

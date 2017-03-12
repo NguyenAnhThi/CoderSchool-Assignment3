@@ -4,7 +4,7 @@
 **Coder Ticket** is a Ruby on Rails application that allows users to create and buy tickets to cool events.
 
 - Submitted by: **Nguyen Anh Thi**
-- Time spent: **31** hours
+- Time spent: **38** hours
 - URL: **https://secret-ridge-60181.herokuapp.com**
 - SimpleCov Test Coverage: [coverage/index.html](coverage/index.html)
 
@@ -12,8 +12,8 @@
 
 The following **required** functionality is complete:
 
-* [ ] Implement required user stories
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [x] Implement required user stories
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 The person with best test coverage will win a small present from the instructor :)
 
@@ -32,8 +32,8 @@ The person with best test coverage will win a small present from the instructor 
 #### Tickets
 
 * [x] Each event can have multiple types of tickets, each with a different `price` and `max_quantity`.
-* [ ] Users can buy tickets to an event, choose the types of tickets, and the quantity of tickets.
-* [ ] Users cannot buy more tickets than the quantity available.
+* [x] Users can buy tickets to an event, choose the types of tickets, and the quantity of tickets.
+* [x] Users cannot buy more tickets than the quantity available.
 * [x] Users can only buy up to 10 of a ticket type at a time. Show a nice flash message.
 
 #### Users
@@ -41,7 +41,7 @@ The person with best test coverage will win a small present from the instructor 
 * [x] User can sign up by providing their email, password, and name.
 * [x] User can login using an email and password.
 * [x] Users can create events.
-* [ ] Users must click "publish event" before an event becomes viewable to other users.
+* [x] Users must click "publish event" before an event becomes viewable to other users.
     * **HINT**: use `published_at:datetime` and `Event.published` scope (class method)
     * Suggestions:
         * See [Add More RESTful Actions](http://guides.rubyonrails.org/routing.html#adding-more-restful-actions) to add a `publish` POST action (member type)
@@ -49,7 +49,7 @@ The person with best test coverage will win a small present from the instructor 
 * [x] Users can create ticket types for that event.
     * **HINT**: make sure you understand what a ticket tpe is. Ask if not clear.
 * [x] Users can create venues.
-* [ ] An event must have at least one `ticket_type` defined before it can be published.
+* [x] An event must have at least one `ticket_type` defined before it can be published.
     * **HINT**: add `Event#have_enough_ticket_types?` (and test it)
 * [x] User can see a list of events he or she has created.
     * Suggestions
@@ -59,7 +59,7 @@ The person with best test coverage will win a small present from the instructor 
 
 ### Optional Stories
 
-* [ ] Users cannot buy tickets to events that occur in the past.
+* [x] Users cannot buy tickets to events that occur in the past.
 * [x] Users can log in with Facebook.
 * [ ] Users receive an email when they have purchased a ticket.
 * [ ] Users can see "related events" when browsing an event. Related events should belong to the same category and be in the same region.

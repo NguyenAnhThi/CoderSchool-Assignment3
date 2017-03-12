@@ -3,7 +3,7 @@ class EventsController < ApplicationController
     if params[:search]
       @events = Event.search(params[:search])
     else
-      @events = Event.upcoming
+      @events = Event.upcoming.published
     end
   end
 
@@ -12,8 +12,20 @@ class EventsController < ApplicationController
     @events = Event.where(id: @events_id)
   end
 
+  def publish
+    set_event
+    if @event.have_enough_ticket_types?
+      @event.published_at = Time.now
+      @event.save!
+      redirect_to root_path, flash: {success: 'Event has been published'}
+    else
+      flash[:error] = "An event must have at least one `ticket_type` defined before it can be published"
+      redirect_to event_path
+    end
+  end
+
   def show
-    @event = Event.find(params[:id])
+    set_event
   end
 
   def new
@@ -38,13 +50,13 @@ class EventsController < ApplicationController
   end
 
   def edit
-    @event = Event.find(params[:id])
+    set_event
     @categories = Category.all
     @venues = Venue.all
   end
 
   def update
-    @event = Event.find(params[:id])
+    set_event
     @categories = Category.all
     @venues = Venue.all
 
@@ -59,12 +71,11 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:starts_at,
-                                  :ends_at,
-                                  :venue_id,
-                                  :hero_image_url,
-                                  :extended_html_description,
-                                  :category_id,
-                                  :name)
+    params.require(:event).permit(:starts_at, :ends_at, :venue_id, :hero_image_url, :extended_html_description, :category_id, :name)
+  end
+
+  private
+  def set_event
+    @event = Event.find(params[:id])
   end
 end

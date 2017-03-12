@@ -7,10 +7,9 @@
       </div>
       <div class="venue-details">
         <%= @event.venue.name %>
-        <br/>
+        <br>
         <%= @event.venue.full_address %>
       </div>
-
       <div class="pull-left">
         <%= fa_icon 'clock-o' %>
       </div>
@@ -20,20 +19,19 @@
     </div>
   </div>
   <div class="row">
-    <div class="col-md-11 col-md-offset-1">
+    <div class="col-md-12">
       <table class="table">
         <th> Ticket Type</th>
         <th> Unit Price</th>
-        <th> Quantity</th>
+        <th> Available</th>
         <% if current_user && current_user == @event.creater %>
             <th>Delete</th>
         <% end %>
-
         <% @event.ticket_types.each do |type| %>
             <tr>
               <td> <%= type.name %> </td>
               <td> <%= number_to_currency(type.price, unit: 'VND ', precision: 0) %> </td>
-              <td> <%= select_tag('quantity', options_for_select(0..10)) %></td>
+              <td> <%= type.max_quantity %> </td>
               <% if current_user && current_user == @event.creater %>
                   <td>
                     <%= link_to event_ticket_path(id: type.id), method: 'delete', data: {confirm: 'Are you sure'}, class: 'btn btn-outline-danger' do %>
@@ -44,39 +42,45 @@
             </tr>
         <% end %>
       </table>
-
       <% if current_user && current_user == @event.creater %>
           <%= form_tag nil, method: 'get' do %>
               <%= hidden_field_tag :event_id, params[:event_id] %>
-              <div class="form-inline">
-                <%= text_field_tag :name, params[:name], placeholder: 'Name', class: 'form-control' %>
-                <%= text_field_tag :price, params[:price], placeholder: 'Price', class: 'form-control' %>
-                <%= text_field_tag :max_quantity, params[:max_quantity], placeholder: 'Quantity', class: 'form-control' %>
-                <%= submit_tag 'Add', class: 'btn btn-primary' %>
-
-                <a href="<%= event_path(id: @event.id) %>">
-                  <button class="form-control btn btn-secondary  btn-block">Back</button>
-                </a>
+              <div class="card">
+                <h3 class="card-header">New Ticket Type</h3>
+                <div class="card-block">
+                  <div class="form-group">
+                    <%= text_field_tag :name, params[:name], placeholder: 'Name', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= text_field_tag :price, params[:price], placeholder: 'Price', class: 'form-control' %>
+                  </div>
+                  <div class="form-group">
+                    <%= text_field_tag :max_quantity, params[:max_quantity], placeholder: 'Quantity', class: 'form-control' %>
+                  </div>
+                </div>
+                <div class="card-footer text-sm-right">
+                  <%= submit_tag 'Add', class: 'btn btn-primary' %>
+                  <a href="<%= event_path(id: @event.id) %>">
+                    <button class="btn btn-secondary">Done</button>
+                  </a>
+                </div>
               </div>
           <% end %>
-
       <% else %>
-          <div class="">
+          <div class="form-group text-sm-right">
             <% if @event.total_quantity == 0 %>
                 <button class="btn btn-block btn-warning disabled">Sold Out</button>
             <% else %>
                 <a href="<%= new_event_ticket_order_path %>">
-                  <button class="btn btn-primary btn-block">Buy</button>
+                  <button class="btn btn-primary"> Next </button>
                 </a>
             <% end %>
-          </div>
-          <div class="" style="text-align: right">
+
             <a href="<%= event_path(id: @event.id) %>">
-              <button class="btn btn-secondary btn-block">Back</button>
+              <button class="btn btn-secondary"> Back </button>
             </a>
           </div>
       <% end %>
-
     </div>
   </div>
 </div>

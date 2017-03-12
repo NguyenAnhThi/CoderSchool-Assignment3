@@ -20,50 +20,62 @@
             </div>
             <div class="clearfix"></div>
         <% end %>
-        <%= link_to new_event_ticket_path(@event) do %>
-            <button class='btn btn-lg btn-block btn-danger'> BOOK NOW</button>
+        <% if current_user && is_event_creater? %>
+            <%= link_to new_event_ticket_path(@event) do %>
+                <button class='btn btn-lg btn-block btn-danger'><i class="fa fa-plus-circle" aria-hidden="true"></i> NEW
+                  TICKET TYPE
+                </button>
+            <% end %>
+        <% else %>
+            <% if @event.ends_at > Time.now %>
+                <%= link_to new_event_ticket_path(@event) do %>
+                    <button class='btn btn-lg btn-block btn-danger'> BOOK NOW</button>
+                <% end %>
+            <% else %>
+                <button class='btn btn-lg btn-block btn-warning disabled'> Event is over</button>
+            <% end %>
         <% end %>
       </div>
     </div>
     <div class="col-md-8 no event-content">
-
-      <!--<div class="container">-->
-        <div class="hero-img hidden-sm-down" style="background-image: url(<%= @event.hero_image_url %>); background-size: cover;"></div>
-        <h3> <%= @event.name %> </h3>
-
-        <% if current_user && is_event_creater? %>
-            <a href="<%= edit_event_path %>" class="btn btn-primary btn-sm" role="button">
-              <i class="fa fa-pencil" aria-hidden="true"></i> Edit
-            </a>
-            <a href="#" class="btn btn-primary btn-sm" role="button">
-              <i class="fa fa-check" aria-hidden="true"></i> Publish
-            </a>
-            <br><br><br>
-        <% end %>
-
-        <div class="pull-left">
-          <%= fa_icon 'clock-o' %>
-        </div>
-        <div class="time-details">
-          <%= @event.starts_at.strftime('%A, %d %b %Y %l:%M %p') %>
-        </div>
-
-        <div class="pull-left">
-          <%= fa_icon 'map-marker' %>
-        </div>
-        <div class="venue-details">
-          <%= @event.venue.name %>
-          <br/>
-          <%= @event.venue.full_address %>
-        </div>
-
-        <div class="img-spacer">
-          <%= image_tag 'shadow-top.png' %>
-        </div>
-        <div class="extended-description">
-          <%= @event.extended_html_description.html_safe %>
-        </div>
-      <!--</div>-->
+      <div class="hero-img hidden-sm-down" style="background-image: url(<%= @event.hero_image_url %>); background-size: cover;"></div>
+      <h3> <%= @event.name %> </h3>
+      <% if current_user && is_event_creater? %>
+          <a href="<%= edit_event_path %>" class="btn btn-primary btn-sm" role="button">
+            <i class="fa fa-pencil" aria-hidden="true"></i> Edit
+          </a>
+          <% if @event.published_at.nil? %>
+              <a href="<%= publish_event_path(id: @event.id) %>" class="btn btn-primary btn-sm" role="button">
+                <i class="fa fa-check" aria-hidden="true"></i> Publish
+              </a>
+          <% else %>
+              <a href="<%= publish_event_path(id: @event.id) %>" class="btn btn-secondary btn-sm disabled" role="button">
+                <i class="fa fa-check" aria-hidden="true"></i> Published
+              </a>
+          <% end %>
+      <% end %>
+      <br><br><br>
+      <div class="pull-left">
+        <%= fa_icon 'clock-o' %>
+      </div>
+      <div class="time-details">
+        <%= @event.starts_at.strftime('%A, %d %b %Y %l:%M %p') %>
+      </div>
+      <div class="pull-left">
+        <%= fa_icon 'map-marker' %>
+      </div>
+      <div class="venue-details">
+        <%= @event.venue.name %>
+        <br/>
+        <%= @event.venue.full_address %>
+      </div>
+      <div class="img-spacer">
+        <%= image_tag 'shadow-top.png' %>
+      </div>
+      <div class="extended-description">
+        <%= @event.extended_html_description.html_safe %>
+      </div>
     </div>
   </div>
+</div>
 </div>

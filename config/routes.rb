@@ -14,7 +14,8 @@ Rails.application.routes.draw do
       get 'upcoming' => 'events#index'
     end
     member do
-      post 'publish'
+      get 'publish'
+      get 'unpublish'
     end
     resources :tickets
     resources :ticket_orders, only: [:new, :create, :show]
